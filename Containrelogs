@@ -1,0 +1,42 @@
+
+
+kubectl logs -f devopspractical-7fd95dcf89-5g78l 
+
+> swimlane-devops-practical@4.0.0 start /app
+> cross-env NODE_ENV=development nodemon server.js
+
+[nodemon] 2.0.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+Express app started on port 3000
+
+
+
+GET / 200 189.741 ms - -
+GET /favicon.ico 404 6.890 ms - 42
+GET /articles/new 302 3.093 ms - 56
+GET /login 200 77.416 ms - -
+GET /signup 200 85.549 ms - -
+POST /users 302 34.375 ms - 46
+GET / 200 93.486 ms - -
+GET /articles/new 200 56.912 ms - -
+POST /articles 302 30.000 ms - 112
+GET /articles/664e4a4d2f42fe00287375f4 200 78.029 ms - -
+{
+  From: 'your@product.com',
+  To: 'venna_sri@yahoo.com',
+  Subject: 'venn added a comment on your article devops practical',
+  HtmlBody: '<p>Hello venn</p><p>venn has added a comment "ass" on your article </p><p>Cheers</p>'
+}
+POST /articles/664e4a4d2f42fe00287375f4/comments 302 93.012 ms - 112
+GET /articles/664e4a4d2f42fe00287375f4 200 61.272 ms - -
+GET / 200 59.308 ms - -
+GET /users/664e4a2b2f42fe00287375f2 200 38.532 ms - -
+GET /articles/new 200 44.671 ms - -
+POST /articles 302 9.837 ms - 112
+GET /articles/664e4a7f2f42fe00287375f7 200 53.963 ms - -
+GET /users/664e4a2b2f42fe00287375f2 304 36.909 ms - -
+GET /articles/new 200 29.840 ms - -
+GET / 200 51.374 ms - -
