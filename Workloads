@@ -1,0 +1,15 @@
+sudo docker ps 
+CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+bbafac657d12   mongo:5.0   "docker-entrypoint.s…"   25 minutes ago   Up 25 minutes   0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mongoDB
+ubuntu@ip-172-31-37-73:~/gitclone/devopspractical$ kubectl get po -A 
+NAMESPACE     NAME                                                  READY   STATUS    RESTARTS   AGE
+default       devopspractical-7fd95dcf89-5g78l                      1/1     Running   0          24m
+kube-system   aws-node-zzz4g                                        2/2     Running   0          50m
+kube-system   coredns-56b8d964f7-fdndv                              1/1     Running   0          54m
+kube-system   coredns-56b8d964f7-fgdrm                              1/1     Running   0          54m
+kube-system   ebs-csi-controller-8484c7f788-pcxtw                   6/6     Running   0          43m
+kube-system   ebs-csi-controller-8484c7f788-xhvwp                   6/6     Running   0          43m
+kube-system   ebs-csi-node-rtpcs                                    3/3     Running   0          43m
+kube-system   kube-proxy-7n74w                                      1/1     Running   0          50m
+kube-system   venna-dev-ca-aws-cluster-autoscaler-7dcbb5747-fb4n9   1/1     Running   0          39m
+ubuntu@ip-172-31-37-73:~/gitclone/devopspractical$ 
