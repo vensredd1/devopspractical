@@ -1,0 +1,168 @@
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+module.vpc.aws_vpc.this[0]: Creating...
+aws_iam_role.eks_nodegroup_role: Creating...
+aws_iam_role.eks_master_role: Creating...
+aws_iam_role.eks_nodegroup_role: Creation complete after 2s [id=venna-eks-nodegroup-role]
+aws_iam_role_policy_attachment.eks-AmazonEKS_CNI_Policy: Creating...
+aws_iam_role_policy_attachment.eks-AmazonEKSWorkerNodePolicy: Creating...
+aws_iam_role_policy_attachment.eks-AmazonEC2ContainerRegistryReadOnly: Creating...
+aws_iam_role.eks_master_role: Creation complete after 2s [id=venna-eks-master-role]
+aws_iam_role_policy_attachment.eks-AmazonEKSVPCResourceController: Creating...
+aws_iam_role_policy_attachment.eks-AmazonEKSClusterPolicy: Creating...
+aws_iam_role_policy_attachment.eks-AmazonEKS_CNI_Policy: Creation complete after 0s [id=venna-eks-nodegroup-role-20240522190228879200000001]
+aws_iam_role_policy_attachment.eks-AmazonEC2ContainerRegistryReadOnly: Creation complete after 0s [id=venna-eks-nodegroup-role-20240522190228942100000002]
+aws_iam_role_policy_attachment.eks-AmazonEKSWorkerNodePolicy: Creation complete after 1s [id=venna-eks-nodegroup-role-20240522190229159700000003]
+aws_iam_role_policy_attachment.eks-AmazonEKSVPCResourceController: Creation complete after 1s [id=venna-eks-master-role-20240522190229215000000004]
+aws_iam_role_policy_attachment.eks-AmazonEKSClusterPolicy: Creation complete after 1s [id=venna-eks-master-role-20240522190229423500000005]
+module.vpc.aws_vpc.this[0]: Still creating... [10s elapsed]
+module.vpc.aws_vpc.this[0]: Creation complete after 11s [id=vpc-00e9f612b838f4cfa]
+module.vpc.aws_subnet.public[1]: Creating...
+module.vpc.aws_route_table.database[0]: Creating...
+module.vpc.aws_default_security_group.this[0]: Creating...
+module.vpc.aws_subnet.database[0]: Creating...
+module.vpc.aws_default_network_acl.this[0]: Creating...
+module.vpc.aws_default_route_table.default[0]: Creating...
+module.vpc.aws_route_table.private[0]: Creating...
+module.vpc.aws_subnet.public[0]: Creating...
+module.vpc.aws_subnet.database[1]: Creating...
+module.public_bastion_sg.aws_security_group.this_name_prefix[0]: Creating...
+module.vpc.aws_default_route_table.default[0]: Creation complete after 0s [id=rtb-05a628442efdc87d7]
+module.vpc.aws_route_table.public[0]: Creating...
+module.vpc.aws_route_table.database[0]: Creation complete after 1s [id=rtb-08a924bc2985ce8bc]
+module.vpc.aws_internet_gateway.this[0]: Creating...
+module.vpc.aws_route_table.private[0]: Creation complete after 1s [id=rtb-0b78b9899f3e86155]
+module.vpc.aws_subnet.private[1]: Creating...
+module.vpc.aws_subnet.database[1]: Creation complete after 1s [id=subnet-0173c3c069e101cc9]
+module.vpc.aws_subnet.private[0]: Creating...
+module.vpc.aws_route_table.public[0]: Creation complete after 1s [id=rtb-03679a4ff98119b9c]
+module.vpc.aws_subnet.database[0]: Creation complete after 1s [id=subnet-08752fa0b63c90b62]
+module.vpc.aws_route_table_association.database[0]: Creating...
+module.vpc.aws_db_subnet_group.database[0]: Creating...
+module.vpc.aws_internet_gateway.this[0]: Creation complete after 0s [id=igw-0aef8b187dd680ba0]
+module.vpc.aws_route_table_association.database[1]: Creating...
+module.vpc.aws_default_network_acl.this[0]: Creation complete after 1s [id=acl-0390eec95f902f44a]
+module.vpc.aws_eip.nat[0]: Creating...
+module.vpc.aws_route_table_association.database[0]: Creation complete after 0s [id=rtbassoc-0bd426aad7c3bd8e1]
+module.vpc.aws_route.public_internet_gateway[0]: Creating...
+module.vpc.aws_default_security_group.this[0]: Creation complete after 1s [id=sg-06028cca70ae8d937]
+module.vpc.aws_subnet.private[1]: Creation complete after 0s [id=subnet-050b959b07ac68a00]
+module.vpc.aws_subnet.private[0]: Creation complete after 0s [id=subnet-06637b612fbf859c2]
+module.vpc.aws_route_table_association.private[0]: Creating...
+module.vpc.aws_route_table_association.private[1]: Creating...
+module.vpc.aws_route_table_association.database[1]: Creation complete after 0s [id=rtbassoc-0db936b8254c7128d]
+module.vpc.aws_route_table_association.private[1]: Creation complete after 0s [id=rtbassoc-0d742cbcf2710ff33]
+module.vpc.aws_eip.nat[0]: Creation complete after 0s [id=eipalloc-0ab83c36d25f6ebac]
+module.vpc.aws_route.public_internet_gateway[0]: Creation complete after 0s [id=r-rtb-03679a4ff98119b9c1080289494]
+module.public_bastion_sg.aws_security_group.this_name_prefix[0]: Creation complete after 2s [id=sg-05fe9cf7d31b1de4f]
+module.public_bastion_sg.aws_security_group_rule.ingress_rules[0]: Creating...
+module.public_bastion_sg.aws_security_group_rule.egress_rules[0]: Creating...
+module.public_bastion_sg.aws_security_group_rule.egress_rules[0]: Creation complete after 0s [id=sgrule-248199577]
+module.vpc.aws_route_table_association.private[0]: Creation complete after 1s [id=rtbassoc-05b31df058ccafcee]
+module.public_bastion_sg.aws_security_group_rule.ingress_rules[0]: Creation complete after 0s [id=sgrule-977782569]
+module.vpc.aws_db_subnet_group.database[0]: Creation complete after 1s [id=venna-dev-eks]
+module.vpc.aws_subnet.public[1]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.public[0]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.public[0]: Creation complete after 11s [id=subnet-0f4e016479d871d67]
+module.vpc.aws_subnet.public[1]: Creation complete after 11s [id=subnet-029eb0acafa118773]
+aws_eks_cluster.eks_cluster: Creating...
+module.vpc.aws_route_table_association.public[0]: Creating...
+module.vpc.aws_nat_gateway.this[0]: Creating...
+module.vpc.aws_route_table_association.public[1]: Creating...
+module.ec2_public.aws_instance.this[0]: Creating...
+module.vpc.aws_route_table_association.public[0]: Creation complete after 0s [id=rtbassoc-069a69a5a69472acb]
+aws_eks_cluster.eks_cluster: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [10s elapsed]
+module.vpc.aws_route_table_association.public[1]: Still creating... [10s elapsed]
+aws_eks_cluster.eks_cluster: Still creating... [20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [20s elapsed]
+module.vpc.aws_route_table_association.public[1]: Still creating... [20s elapsed]
+module.vpc.aws_route_table_association.public[1]: Creation complete after 23s [id=rtbassoc-0dcd1144045a06ad5]
+aws_eks_cluster.eks_cluster: Still creating... [30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [30s elapsed]
+
+
+aws_eks_node_group.eks_ng_public: Creating...
+module.ec2_public.aws_instance.this[0]: Creating...
+aws_eks_node_group.eks_ng_public: Still creating... [10s elapsed]
+module.ec2_public.aws_instance.this[0]: Still creating... [10s elapsed]
+module.ec2_public.aws_instance.this[0]: Creation complete after 12s [id=i-06347df02b58e349c]
+aws_eip.bastion_eip: Creating...
+aws_eip.bastion_eip: Creation complete after 1s [id=eipalloc-0dd2d3f37a667b4f3]
+null_resource.copy_ec2_keys: Creating...
+null_resource.copy_ec2_keys: Provisioning with 'file'...
+null_resource.copy_ec2_keys: Provisioning with 'remote-exec'...
+null_resource.copy_ec2_keys (remote-exec): Connecting to remote host via SSH...
+null_resource.copy_ec2_keys (remote-exec):   Host: 15.206.224.106
+null_resource.copy_ec2_keys (remote-exec):   User: ec2-user
+null_resource.copy_ec2_keys (remote-exec):   Password: false
+null_resource.copy_ec2_keys (remote-exec):   Private key: true
+null_resource.copy_ec2_keys (remote-exec):   Certificate: false
+null_resource.copy_ec2_keys (remote-exec):   SSH Agent: false
+null_resource.copy_ec2_keys (remote-exec):   Checking Host Key: false
+null_resource.copy_ec2_keys (remote-exec):   Target Platform: unix
+null_resource.copy_ec2_keys (remote-exec): Connected!
+null_resource.copy_ec2_keys: Provisioning with 'local-exec'...
+null_resource.copy_ec2_keys (local-exec): Executing: ["/bin/sh" "-c" "echo VPC created on `date` and VPC ID: vpc-00e9f612b838f4cfa >> creation-time-vpc-id.txt"]
+null_resource.copy_ec2_keys: Creation complete after 3s [id=6936780737053733213]
+aws_eks_node_group.eks_ng_public: Still creating... [20s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [30s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [40s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [50s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m0s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m10s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m20s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m30s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m40s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [1m50s elapsed]
+aws_eks_node_group.eks_ng_public: Still creating... [2m0s elapsed]
+aws_eks_node_group.eks_ng_public: Creation complete after 2m9s [id=venna-dev-eks:venna-eks-ng-public]
+
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+aws_iam_openid_connect_provider_arn = "arn:aws:iam::637423200225:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/DEEA0CD73C9B1B613E529CBE5DB5ED4C"
+aws_iam_openid_connect_provider_extract_from_arn = "oidc.eks.ap-south-1.amazonaws.com/id/DEEA0CD73C9B1B613E529CBE5DB5ED4C"
+azs = tolist([
+  "ap-south-1a",
+  "ap-south-1b",
+  "ap-south-1c",
+])
+cluster_arn = "arn:aws:eks:ap-south-1:637423200225:cluster/venna-dev-eks"
+cluster_certificate_authority_data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJUkxCUHhDYzBCQVF3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBMU1qSXhPVEF5TWpCYUZ3MHpOREExTWpBeE9UQTNNakJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURuU1FvS0Z4SmFtZnJCbkFiUW1MMmd3a3lEZkRpMWxFMm9kc1BKamlnVzdoUVNNdGMyM3Urc24wTDAKVDMzdFplZFdEU3o5ZXI1Uk5zSEQybUsvL1RSV0swQkFtWVQwSmNGSTBYTDVEbXdhZ2s2Vmc0d254YSsyREZOUAp4MUNlc2xmZWJsQXpKd213V0ZWS2NqTkswejRmay9mOUNxZkIzWWJXWExON2lNOUYvNUJSNmNoa0FiR1htSFJGCmt4bnZKT0JmcnVLQm1yMGFTSkhoc1MvZ2xLS0lsbDYxVjNqU21WMG1VVm5TSmo5WGVJUXY4c3k0RkcrcTNZaGwKbjlYaHVwUEYvZEM5bDd0K3RoekRzTVRPYTdmSjA3YWdjMktQNGtDZG9nanZQbDF4bkx5STZ4bWxpUWFCUSt0SApnOEVKTEVnVXZab0UzUWF4WXdEUDN3aVpkRkpuQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUTUdJUG9SSjBVYlRaZnQ5SVBkcEdDdU1wY2Z6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ2NjNCs2TzhYSQpOQ3VxWHRTNndoMERMcThkMVdpVFBTUkp0WmI1cytreUt3MUFZTjJZRGVacThFTnZGR3FadzZzbmpDMXpoUVkrClIxNlp0aVJKMXVYbzNNc2RtcTVVTmpWUXVWRHExR0licHRJalZ1S1pHaSsvck5YNU1uL2FFa3lKNmptbFdHK2IKUjcyY1NyTk43TlRGcGVYR05nY05WYkt2MHpjaXZya2tYdFFzc2VEcTI5RUNvS2VPZXJmZFlsYzRvOFJUb3U3QwpieDZHbU50RmJhTHRIYnJCaEx0VVBNOSt6OEVkWmNBeFdNR0lkeGpObjduVldJcWkxUE9EZkhTcHRtSUR4YlZlCkcyQXE0cndxUzRXRFhKRC9La2RZMTJBMGowTE9GMklvSVRkUFZsU0ZNWjJZZFVaTXFwT1NuMzZmc0dIdGYzNEYKb05qSlZVVUlUVG16Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+cluster_endpoint = "https://DEEA0CD73C9B1B613E529CBE5DB5ED4C.gr7.ap-south-1.eks.amazonaws.com"
+cluster_iam_role_arn = "arn:aws:iam::637423200225:role/venna-eks-master-role"
+cluster_iam_role_name = "venna-eks-master-role"
+cluster_id = "venna-dev-eks"
+cluster_oidc_issuer_url = "https://oidc.eks.ap-south-1.amazonaws.com/id/DEEA0CD73C9B1B613E529CBE5DB5ED4C"
+cluster_primary_security_group_id = "sg-084fda1a3ef958429"
+cluster_version = "1.28"
+ec2_bastion_public_instance_ids = "i-06347df02b58e349c"
+ec2_bastion_public_ip = "15.206.224.106"
+nat_public_ips = tolist([
+  "13.202.114.29",
+])
+node_group_public_arn = "arn:aws:eks:ap-south-1:637423200225:nodegroup/venna-dev-eks/venna-eks-ng-public/f4c7d0dc-0a07-393d-4ec2-0a5a1c731d5e"
+node_group_public_id = "venna-dev-eks:venna-eks-ng-public"
+node_group_public_status = "ACTIVE"
+node_group_public_version = "1.28"
+private_subnets = [
+  "subnet-06637b612fbf859c2",
+  "subnet-050b959b07ac68a00",
+]
+public_subnets = [
+  "subnet-0f4e016479d871d67",
+  "subnet-029eb0acafa118773",
+]
+vpc_cidr_block = "10.0.0.0/16"
+vpc_id = "vpc-00e9f612b838f4cfa"
+
+
+
+
+
